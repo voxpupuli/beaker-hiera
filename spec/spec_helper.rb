@@ -1,6 +1,6 @@
 require 'simplecov'
-require 'beaker'
 require 'beaker-hiera'
+require 'beaker_test_helpers'
 require 'helpers'
 
 require 'rspec/its'

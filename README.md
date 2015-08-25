@@ -1,2 +1,2 @@
-# beaker-answers
-Let's try and construct an answers library!
+# beaker-hiera
+Beaker Hiera DSL Extension Library!

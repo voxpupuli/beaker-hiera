@@ -1,5 +1,5 @@
 module BeakerHiera
   module Version
-    STRING = '0.0.34'
+    STRING = '0.0.1'
   end
 end

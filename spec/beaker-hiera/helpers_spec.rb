@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 class ClassMixedWithDSLHelpers
-  include Beaker::DSL::Helpers
-  include Beaker::DSL::Wrappers
-  include Beaker::DSL::Roles
-  include Beaker::DSL::Patterns
+  include BeakerTestHelpers
   include BeakerHiera::Helpers
 
   def logger
@@ -51,6 +48,7 @@ describe ClassMixedWithDSLHelpers do
     let(:hierarchy) { [ 'nodes/%{::fqdn}', 'common' ] }
     it 'delegates to #write_hiera_config_on with the default host' do
       allow( subject ).to receive( :hosts ).and_return( hosts )
+      allow( subject ).to receive( :default ).and_return( hosts[0] )
       expect( subject ).to receive( :write_hiera_config_on ).with( master, hierarchy).once
       subject.write_hiera_config( hierarchy )
     end
@@ -76,6 +74,7 @@ describe ClassMixedWithDSLHelpers do
     let(:path) { 'spec/fixtures/hieradata' }
     it 'delegates to #copy_hiera_data_to with the default host' do
       allow( subject ).to receive( :hosts ).and_return( hosts )
+      allow( subject ).to receive( :default ).and_return( hosts[0] )
       expect( subject ).to receive( :copy_hiera_data_to ).with( master, path).once
       subject.copy_hiera_data( path )
     end
