@@ -4,7 +4,7 @@ require 'beaker-hiera/version'
 
 Gem::Specification.new do |s|
   s.name        = "beaker-hiera"
-  s.version     = BeakerHiera::Version::STRING
+  s.version     = Beaker::DSL::Helpers::Hiera::Version::STRING
   s.authors     = ["Puppetlabs"]
   s.email       = ["qe-team@puppetlabs.com"]
   s.homepage    = "https://github.com/puppetlabs/beaker-hiera"

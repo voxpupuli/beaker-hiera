@@ -1,7 +1,9 @@
-module BeakerHiera
+module Beaker
+  module DSL
+    module Helpers
       # Methods that help you interact with your hiera installation, hiera must be installed
       # for these methods to execute correctly
-    module Helpers
+    module Hiera
 
         # Write hiera config file on one or more provided hosts
         #
@@ -52,5 +54,7 @@ module BeakerHiera
           host[:type] =~ /aio/ ? File.join(host.puppet['codedir'], 'hieradata') : host[:hieradatadir]
         end
 
+      end
     end
+  end
 end
