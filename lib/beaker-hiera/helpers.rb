@@ -3,7 +3,7 @@ module Beaker
     module Helpers
       # Methods that help you interact with your hiera installation, hiera must be installed
       # for these methods to execute correctly
-    module Hiera
+      module Hiera
 
         # Write hiera config file on one or more provided hosts
         #
