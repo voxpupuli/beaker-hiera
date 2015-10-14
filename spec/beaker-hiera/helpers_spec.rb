@@ -11,18 +11,8 @@ class ClassMixedWithDSLHelpers
 end
 
 describe ClassMixedWithDSLHelpers do
-  let( :opts )   { Beaker::Options::Presets.env_vars }
-  let( :command ){ 'ls' }
-  let( :host )   { double.as_null_object }
-  let( :result ) { Beaker::Result.new( host, command ) }
-
-  let( :master ) { make_host( 'master',   :roles => %w( master agent default)    ) }
-  let( :agent )  { make_host( 'agent',    :roles => %w( agent )           ) }
-  let( :custom ) { make_host( 'custom',   :roles => %w( custom agent )    ) }
-  let( :dash )   { make_host( 'console',  :roles => %w( dashboard agent ) ) }
-  let( :db )     { make_host( 'db',       :roles => %w( database agent )  ) }
-  let( :hosts )  { [ master, agent, dash, db, custom ] }
-
+  let( :host  ) { make_host( 'master', :roles => %w( master agent default) ) }
+  let( :hosts ) { [ host ] }
 
   describe "#write_hiera_config_on" do
     let(:hierarchy) { [ 'nodes/%{::fqdn}', 'common' ] }
@@ -48,8 +38,8 @@ describe ClassMixedWithDSLHelpers do
     let(:hierarchy) { [ 'nodes/%{::fqdn}', 'common' ] }
     it 'delegates to #write_hiera_config_on with the default host' do
       allow( subject ).to receive( :hosts ).and_return( hosts )
-      allow( subject ).to receive( :default ).and_return( hosts[0] )
-      expect( subject ).to receive( :write_hiera_config_on ).with( master, hierarchy).once
+      allow( subject ).to receive( :default ).and_return( host )
+      expect( subject ).to receive( :write_hiera_config_on ).with( host, hierarchy).once
       subject.write_hiera_config( hierarchy )
     end
 
@@ -74,8 +64,8 @@ describe ClassMixedWithDSLHelpers do
     let(:path) { 'spec/fixtures/hieradata' }
     it 'delegates to #copy_hiera_data_to with the default host' do
       allow( subject ).to receive( :hosts ).and_return( hosts )
-      allow( subject ).to receive( :default ).and_return( hosts[0] )
-      expect( subject ).to receive( :copy_hiera_data_to ).with( master, path).once
+      allow( subject ).to receive( :default ).and_return( host )
+      expect( subject ).to receive( :copy_hiera_data_to ).with( host, path).once
       subject.copy_hiera_data( path )
     end
 
@@ -83,7 +73,6 @@ describe ClassMixedWithDSLHelpers do
 
   describe '#hiera_datadir' do
     it 'returns the codedir based hieradatadir for AIO' do
-      host = hosts[0]
       host['type'] = :aio
       codedir = '/usr/code'
       allow( host ).to receive( :puppet ) { { 'codedir' => codedir } }
@@ -93,7 +82,6 @@ describe ClassMixedWithDSLHelpers do
 
     it 'returns the hieradata host value for anything not AIO (backwards compatible)' do
       host_hieradatadir_value = '/home/fishing/man/pants'
-      host = hosts[0]
       host[:hieradatadir] = host_hieradatadir_value
       expect( subject.hiera_datadir(host) ).to be === host_hieradatadir_value
     end
