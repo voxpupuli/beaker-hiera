@@ -53,7 +53,7 @@ module Beaker
         #
         # @return [String] Path to the hiera data directory
         def hiera_datadir(host)
-          host[:type] =~ /aio/ ? File.join(host.puppet['codedir'], 'hieradata') : host[:hieradatadir]
+          File.join(host.puppet['codedir'], 'hieradata')
         end
 
       end
