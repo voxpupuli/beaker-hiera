@@ -12,16 +12,16 @@ module Beaker
         # @param[Array] One or more hierarchy paths
         def write_hiera_config_on(host, hierarchy)
 
-          block_on host do |host|
+          block_on host do |hst|
             hiera_config = {
               backends: 'yaml',
               yaml: {
-                datadir: hiera_datadir(host)
+                datadir: hiera_datadir(hst)
               },
               hierarchy: hierarchy,
               logger: 'console'
             }
-            create_remote_file host, host.puppet['hiera_config'], hiera_config.to_yaml
+            create_remote_file hst, hst.puppet['hiera_config'], hiera_config.to_yaml
           end
         end
 
