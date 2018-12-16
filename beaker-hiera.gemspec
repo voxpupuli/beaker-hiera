@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'thin'
 
   # Run time dependencies
+  s.add_runtime_dependency 'beaker', '~> 4.0'
 
 end
 
