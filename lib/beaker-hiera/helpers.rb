@@ -7,9 +7,11 @@ module Beaker
 
         # Write hiera config file on one or more provided hosts
         #
-        # @param[Host, Array<Host>, String, Symbol] host    One or more hosts to act upon,
-        #                           or a role (String or Symbol) that identifies one or more hosts.
-        # @param[Array] One or more hierarchy paths
+        # @param [Host, Array<Host>, String, Symbol] host
+        #   One or more hosts to act upon, or a role (String or Symbol) that
+        #   identifies one or more hosts.
+        # @param [Array] hierarchy
+        #   One or more hierarchy paths
         def write_hiera_config_on(host, hierarchy)
 
           block_on host do |hst|
@@ -33,9 +35,11 @@ module Beaker
 
         # Copy hiera data files to one or more provided hosts
         #
-        # @param[Host, Array<Host>, String, Symbol] host    One or more hosts to act upon,
-        #                           or a role (String or Symbol) that identifies one or more hosts.
-        # @param[String]            Directory containing the hiera data files.
+        # @param [Host, Array<Host>, String, Symbol] host
+        #   One or more hosts to act upon, or a role (String or Symbol) that
+        #   identifies one or more hosts.
+        # @param [String] source
+        #   Directory containing the hiera data files.
         def copy_hiera_data_to(host, source)
           scp_to host, File.expand_path(source), hiera_datadir(host)
         end
@@ -49,7 +53,8 @@ module Beaker
         # Get file path to the hieradatadir for a given host.
         # Handles whether or not a host is AIO-based & backwards compatibility
         #
-        # @param[Host] host Host you want to use the hieradatadir from
+        # @param [Host] host
+        #   Host you want to use the hieradatadir from
         #
         # @return [String] Path to the hiera data directory
         def hiera_datadir(host)
