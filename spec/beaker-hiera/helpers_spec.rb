@@ -12,7 +12,6 @@ end
 
 describe ClassMixedWithDSLHelpers do
   let( :host  ) { make_host( 'master', :roles => %w( master agent default) ) }
-  let( :hosts ) { [ host ] }
 
   describe "#write_hiera_config_on" do
     let(:hierarchy) { [ 'nodes/%{::fqdn}', 'common' ] }
@@ -28,7 +27,6 @@ describe ClassMixedWithDSLHelpers do
   describe "#write_hiera_config" do
     let(:hierarchy) { [ 'nodes/%{::fqdn}', 'common' ] }
     it 'delegates to #write_hiera_config_on with the default host' do
-      allow( subject ).to receive( :hosts ).and_return( hosts )
       allow( subject ).to receive( :default ).and_return( host )
       expect( subject ).to receive( :write_hiera_config_on ).with( host, hierarchy).once
       subject.write_hiera_config( hierarchy )
@@ -48,7 +46,6 @@ describe ClassMixedWithDSLHelpers do
   describe "#copy_hiera_data" do
     let(:path) { 'spec/fixtures/hieradata' }
     it 'delegates to #copy_hiera_data_to with the default host' do
-      allow( subject ).to receive( :hosts ).and_return( hosts )
       allow( subject ).to receive( :default ).and_return( host )
       expect( subject ).to receive( :copy_hiera_data_to ).with( host, path).once
       subject.copy_hiera_data( path )
