@@ -1,13 +1,11 @@
 require 'spec_helper'
 
 class ClassMixedWithDSLHelpers
-  include BeakerTestHelpers
-  include Beaker::DSL::Helpers::Hiera
+  include Beaker::DSL
 
   def logger
     RSpec::Mocks::Double.new('logger').as_null_object
   end
-
 end
 
 describe ClassMixedWithDSLHelpers do
