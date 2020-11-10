@@ -9,7 +9,7 @@ class ClassMixedWithDSLHelpers
 end
 
 describe ClassMixedWithDSLHelpers do
-  let( :host  ) { make_host( 'master', :roles => %w( master agent default) ) }
+  let( :host  ) { instance_double('Beaker::Host') }
   let( :puppet ) do
     { 'codedir' => '/usr/code', 'hiera_config' => '/usr/face' }
   end

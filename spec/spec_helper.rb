@@ -1,8 +1,8 @@
 require 'simplecov'
 require 'beaker-hiera'
-require 'helpers'
 
 RSpec.configure do |config|
-  config.include TestFileHelpers
-  config.include HostHelpers
+  config.mock_with :rspec do |mocks|
+    mocks.verify_doubled_constant_names = true
+  end
 end
