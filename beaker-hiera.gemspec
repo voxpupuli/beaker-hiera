@@ -21,8 +21,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'rspec-its'
   s.add_development_dependency 'fakefs', '~> 0.6'
-  s.add_development_dependency 'rake', '~> 10.1'
+  s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'stringify-hash', '~> 0.0.0'
   s.add_development_dependency 'pry', '~> 0.10'
 
   # Documentation dependencies
@@ -31,7 +32,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'thin'
 
   # Run time dependencies
-  s.add_runtime_dependency 'stringify-hash', '~> 0.0.0'
+  s.add_runtime_dependency 'beaker', '~> 4.0'
 
 end
 
