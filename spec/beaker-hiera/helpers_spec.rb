@@ -16,22 +16,13 @@ describe ClassMixedWithDSLHelpers do
 
   describe "#write_hiera_config_on" do
     let(:hierarchy) { [ 'nodes/%{::fqdn}', 'common' ] }
-    it 'on FOSS host' do
-      host = make_host('testhost', { :platform => 'ubuntu' } )
+
+    it 'on host' do
       hiera_config = '/usr/face'
       allow( host ).to receive( :puppet ) { { 'hiera_config' => hiera_config } }
       expect(subject).to receive(:create_remote_file).with(host, hiera_config, /#{host[:hieradatadir]}/)
       subject.write_hiera_config_on(host, hierarchy)
     end
-
-    it 'on PE host' do
-      host = make_host('testhost', { :platform => 'ubuntu', :type => 'pe' } )
-      hiera_config = '/usr/face'
-      allow( host ).to receive( :puppet ) { { 'hiera_config' => hiera_config } }
-      expect(subject).to receive(:create_remote_file).with(host, hiera_config, /#{host[:hieradatadir]}/)
-      subject.write_hiera_config_on(host, hierarchy)
-    end
-
   end
 
   describe "#write_hiera_config" do
@@ -47,14 +38,8 @@ describe ClassMixedWithDSLHelpers do
 
   describe "#copy_hiera_data_to" do
     let(:path) { 'spec/fixtures/hieradata' }
-    it 'on FOSS host' do
-      host = make_host('testhost', { :platform => 'ubuntu' } )
-      expect(subject).to receive(:scp_to).with(host, File.expand_path(path), host[:hieradatadir])
-      subject.copy_hiera_data_to(host, path)
-    end
 
-    it 'on PE host' do
-      host = make_host('testhost', { :platform => 'ubuntu', :type => 'pe' } )
+    it 'on host' do
       expect(subject).to receive(:scp_to).with(host, File.expand_path(path), host[:hieradatadir])
       subject.copy_hiera_data_to(host, path)
     end
