@@ -1,8 +1,8 @@
 module Beaker
   module DSL
     module Helpers
-      # Methods that help you interact with your hiera installation, hiera must be installed
-      # for these methods to execute correctly
+      # Methods that help you interact with your hiera installation. Hiera must be installed
+      # for these methods to execute correctly.
       module Hiera
         # Write hiera config file on one or more provided hosts
         #
@@ -26,6 +26,10 @@ module Beaker
         end
 
         # Write hiera config file for the default host
+        #
+        # @param [Array] hierarchy
+        #   One or more hierarchy paths
+        #
         # @see #write_hiera_config_on
         def write_hiera_config(hierarchy)
           write_hiera_config_on(default, hierarchy)
@@ -43,6 +47,10 @@ module Beaker
         end
 
         # Copy hiera data files to the default host
+        #
+        # @param [String] source
+        #   Directory containing the hiera data files.
+        #
         # @see #copy_hiera_data_to
         def copy_hiera_data(source)
           copy_hiera_data_to(default, source)
