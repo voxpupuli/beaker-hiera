@@ -4,7 +4,6 @@ module Beaker
       # Methods that help you interact with your hiera installation, hiera must be installed
       # for these methods to execute correctly
       module Hiera
-
         # Write hiera config file on one or more provided hosts
         #
         # @param [Host, Array<Host>, String, Symbol] host
@@ -13,7 +12,6 @@ module Beaker
         # @param [Array] hierarchy
         #   One or more hierarchy paths
         def write_hiera_config_on(host, hierarchy)
-
           block_on host do |hst|
             hiera_config = {
               backends: 'yaml',
@@ -60,7 +58,6 @@ module Beaker
         def hiera_datadir(host)
           File.join(host.puppet['codedir'], 'hieradata')
         end
-
       end
     end
   end

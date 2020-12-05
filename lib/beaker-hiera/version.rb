@@ -3,7 +3,7 @@ module Beaker
     module Helpers
       module Hiera
         module Version
-          STRING = '0.2.0'
+          STRING = '0.2.0'.freeze
         end
       end
     end

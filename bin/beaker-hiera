@@ -4,7 +4,7 @@ require 'rubygems' unless defined?(Gem)
 require 'beaker-hiera'
 
 VERSION_STRING =
-"
+  "
                                  _ .--.
                                 ( `    )
         beaker-hiera         .-'      `--,
@@ -23,10 +23,8 @@ VERSION_STRING =
                       ||
                      |\"\"|
                      '=='
-"
+".freeze
 
-
-
-puts VERSION_STRING % [BeakerHiera::Version::STRING]
+puts format(VERSION_STRING, BeakerHiera::Version::STRING)
 
 exit 0
