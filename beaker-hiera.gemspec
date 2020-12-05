@@ -4,9 +4,9 @@ require 'beaker-hiera/version'
 Gem::Specification.new do |s|
   s.name        = 'beaker-hiera'
   s.version     = Beaker::DSL::Helpers::Hiera::Version::STRING
-  s.authors     = ['Puppetlabs']
-  s.email       = ['qe-team@puppetlabs.com']
-  s.homepage    = 'https://github.com/puppetlabs/beaker-hiera'
+  s.authors     = ['Vox Pupuli', 'Puppetlabs']
+  s.email       = ['voxpupuli@groups.io']
+  s.homepage    = 'https://github.com/voxpupuli/beaker-hiera'
   s.summary     = 'Hiera DSL Helpers!'
   s.description = 'For use for the Beaker acceptance testing tool'
   s.license     = 'Apache2'
