@@ -1,10 +1,15 @@
 # default - History
 ## Tags
+* [0.3.0 - 18 May, 2021](#0.2.1)
 * [0.2.0 - 10 Nov, 2020](#0.2.0)
 * [0.1.1 - 14 Oct, 2.05 (a23d45bc)](#0.1.1)
 * [0.1.0 - 8 Sep, 2.05 (7d1ef9b6)](#0.1.0)
 
 ## Details
+
+### <a name = "0.3.0">0.3.0 - 18 May, 2021
+
+* Major update to work with Beaker 4
 
 ### <a name = "0.2.0">0.2.0 - 10 Nov, 2020
 
