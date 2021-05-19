@@ -7,6 +7,11 @@
 
 ## Details
 
+### <a name = "0.4.0">0.4.0 - 19 May, 2021
+
+* Support Ruby 3
+* Handle an array of hosts in copy_hiera_data_to
+
 ### <a name = "0.3.0">0.3.0 - 18 May, 2021
 
 * Major update to work with Beaker 4
