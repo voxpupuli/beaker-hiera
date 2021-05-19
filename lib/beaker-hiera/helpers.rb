@@ -43,7 +43,9 @@ module Beaker
         # @param [String] source
         #   Directory containing the hiera data files.
         def copy_hiera_data_to(host, source)
-          scp_to host, File.expand_path(source), hiera_datadir(host)
+          block_on host do |hst|
+            scp_to hst, File.expand_path(source), hiera_datadir(hst)
+          end
         end
 
         # Copy hiera data files to the default host
