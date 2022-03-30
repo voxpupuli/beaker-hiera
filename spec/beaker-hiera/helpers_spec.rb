@@ -19,7 +19,7 @@ describe ClassMixedWithDSLHelpers do
   end
 
   describe '#write_hiera_config_on' do
-    let(:hierarchy) { ['nodes/%{::fqdn}', 'common'] }
+    let(:hierarchy) { [{ 'name' => 'common', 'path' => 'common.yaml' }] }
 
     it 'on host' do
       expect(subject).to receive(:create_remote_file).with(host, '/usr/face', %r{datadir: "/usr/code/hieradata"})
@@ -28,7 +28,7 @@ describe ClassMixedWithDSLHelpers do
   end
 
   describe '#write_hiera_config' do
-    let(:hierarchy) { ['nodes/%{::fqdn}', 'common'] }
+    let(:hierarchy) { [{ 'name' => 'common', 'path' => 'common.yaml' }] }
 
     it 'delegates to #write_hiera_config_on with the default host' do
       expect(subject).to receive(:default).and_return(host)

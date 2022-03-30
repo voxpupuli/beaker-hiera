@@ -9,17 +9,19 @@ module Beaker
         # @param [Host, Array<Host>, String, Symbol] host
         #   One or more hosts to act upon, or a role (String or Symbol) that
         #   identifies one or more hosts.
-        # @param [Array] hierarchy
-        #   One or more hierarchy paths
+        # @param [Array[Hash[String, String]]] hierarchy
+        #   The hierachy as specified in Hiera config YAML version 5
+        #
+        # @see https://www.puppet.com/docs/puppet/7/hiera_config_yaml_5.html
         def write_hiera_config_on(host, hierarchy)
           block_on host do |hst|
             hiera_config = {
-              backends: 'yaml',
-              yaml: {
-                datadir: hiera_datadir(hst),
+              'version' => 5,
+              'defaults' => {
+                'datadir' => hiera_datadir(hst),
+                'data_hash' => 'yaml_data',
               },
-              hierarchy: hierarchy,
-              logger: 'console',
+              'hierarchy' => hierarchy,
             }
             create_remote_file hst, hst.puppet['hiera_config'], hiera_config.to_yaml
           end
