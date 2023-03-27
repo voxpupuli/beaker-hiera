@@ -16,10 +16,10 @@ module Beaker
             hiera_config = {
               backends: 'yaml',
               yaml: {
-                datadir: hiera_datadir(hst)
+                datadir: hiera_datadir(hst),
               },
               hierarchy: hierarchy,
-              logger: 'console'
+              logger: 'console',
             }
             create_remote_file hst, hst.puppet['hiera_config'], hiera_config.to_yaml
           end
