@@ -16,6 +16,21 @@ end
 task default: :test
 
 begin
+  require 'rubygems'
+  require 'github_changelog_generator/task'
+rescue LoadError
+  # github_changelog_generator is an optional release
+else
+  GitHubChangelogGenerator::RakeTask.new :changelog do |config|
+    config.exclude_labels = %w[duplicate question invalid wontfix wont-fix skip-changelog]
+    config.user = 'voxpupuli'
+    config.project = 'beaker-hiera'
+    gem_version = Gem::Specification.load("#{config.project}.gemspec").version
+    config.future_release = gem_version
+  end
+end
+
+begin
   require 'rubocop/rake_task'
 rescue LoadError
   # RuboCop is an optional group
