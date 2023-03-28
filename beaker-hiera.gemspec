@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.license     = 'Apache2'
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
@@ -22,6 +21,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'rspec', '~> 3.0'
+  s.add_development_dependency 'rubocop', '~> 1.48.1'
+  s.add_development_dependency 'rubocop-performance', '~> 1.10'
+  s.add_development_dependency 'rubocop-rake', '~> 0.2'
+  s.add_development_dependency 'rubocop-rspec', '>= 1.44'
   s.add_development_dependency 'simplecov'
 
   # Documentation dependencies
