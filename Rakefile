@@ -26,6 +26,5 @@ else
     config.project = 'beaker-hiera'
     gem_version = Gem::Specification.load("#{config.project}.gemspec").version
     config.future_release = gem_version
-    config.since_tag = '0.1.0'
   end
 end
