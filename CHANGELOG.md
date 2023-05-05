@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.6.0](https://github.com/voxpupuli/beaker-hiera/tree/0.6.0) (2023-05-05)
+
+[Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/0.5.0...0.6.0)
+
+**Merged pull requests:**
+
+- GCG: Add faraday-retry dep [\#26](https://github.com/voxpupuli/beaker-hiera/pull/26) ([bastelfreak](https://github.com/bastelfreak))
+- switch to voxpupuli-rubocop and cleanup gemspec [\#25](https://github.com/voxpupuli/beaker-hiera/pull/25) ([bastelfreak](https://github.com/bastelfreak))
+- Update release workflow for Vox Pupuli standard [\#24](https://github.com/voxpupuli/beaker-hiera/pull/24) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [0.5.0](https://github.com/voxpupuli/beaker-hiera/tree/0.5.0) (2023-03-28)
 
 [Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/0.4.0...0.5.0)
