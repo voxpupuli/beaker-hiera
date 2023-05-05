@@ -21,13 +21,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'simplecov', '~> 0.22.0'
   s.add_development_dependency 'voxpupuli-rubocop', '~> 1.2'
-
-  # Documentation dependencies
-  s.add_development_dependency 'markdown'
-  s.add_development_dependency 'thin'
-  s.add_development_dependency 'yard'
 
   # Run time dependencies
   s.add_runtime_dependency 'beaker', '>= 4', '< 6'
