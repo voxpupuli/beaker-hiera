@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0](https://github.com/voxpupuli/beaker-hiera/tree/1.0.0) (2023-11-03)
+
+[Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/0.6.0...1.0.0)
+
+**Breaking changes:**
+
+- Convert to Hiera 5 [\#17](https://github.com/voxpupuli/beaker-hiera/pull/17) ([ekohl](https://github.com/ekohl))
+
 ## [0.6.0](https://github.com/voxpupuli/beaker-hiera/tree/0.6.0) (2023-05-05)
 
 [Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/0.5.0...0.6.0)
@@ -24,7 +32,6 @@
 
 **Merged pull requests:**
 
-- Bump actions/checkout from 2 to 3 [\#23](https://github.com/voxpupuli/beaker-hiera/pull/23) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Implement rubocop & fix violations [\#22](https://github.com/voxpupuli/beaker-hiera/pull/22) ([bastelfreak](https://github.com/bastelfreak))
 - dependabot: check for github actions and gems [\#21](https://github.com/voxpupuli/beaker-hiera/pull/21) ([bastelfreak](https://github.com/bastelfreak))
 
