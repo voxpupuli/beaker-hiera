@@ -1,5 +1,12 @@
 # beaker-hiera
 
+[![License](https://img.shields.io/github/license/voxpupuli/beaker.svg)](https://github.com/voxpupuli/beaker/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/voxpupuli/beaker/branch/master/graph/badge.svg?token=Mypkl78hvK)](https://codecov.io/gh/voxpupuli/beaker)
+[![Release](https://github.com/voxpupuli/beaker/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/beaker/actions/workflows/release.yml)
+[![RubyGem Version](https://img.shields.io/gem/v/beaker.svg)](https://rubygems.org/gems/beaker)
+[![RubyGem Downloads](https://img.shields.io/gem/dt/beaker.svg)](https://rubygems.org/gems/beaker)
+[![Donated by Puppet Inc](https://img.shields.io/badge/donated%20by-Puppet%20Inc-fb7047.svg)](#transfer-notice)
+
 Beaker Hiera DSL Extension Library! This allows to easily use Hiera data in acceptance tests.
 
 ## Usage
@@ -32,3 +39,25 @@ hierarchy = [
 write_hiera_config_on(host, hierarchy)
 copy_hiera_data_to(host, 'spec/acceptance/hieradata')
 ```
+
+## Transfer Notice
+
+This plugin was originally authored by [Puppet Inc](http://puppet.com).
+The maintainer preferred that Puppet Community take ownership of the module for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here.
+
+Previously: https://github.com/puppetlabs/beaker-hiera
+
+## License
+
+This gem is licensed under the Apache-2 license.
+
+## Release information
+
+To make a new release, please do:
+* update the version in `lib/beaker-hiera/version.rb`
+* Install gems with `bundle install --with release --path .vendor`
+* generate the changelog with `bundle exec rake changelog`
+* Check if the new version matches the closed issues/PRs in the changelog
+* Create a PR with it
+* After it got merged, push a tag. GitHub actions will do the actual release to rubygems and GitHub Packages
