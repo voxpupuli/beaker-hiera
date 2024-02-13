@@ -1,10 +1,10 @@
 # beaker-hiera
 
-[![License](https://img.shields.io/github/license/voxpupuli/beaker.svg)](https://github.com/voxpupuli/beaker/blob/master/LICENSE)
-[![codecov](https://codecov.io/gh/voxpupuli/beaker/branch/master/graph/badge.svg?token=Mypkl78hvK)](https://codecov.io/gh/voxpupuli/beaker)
-[![Release](https://github.com/voxpupuli/beaker/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/beaker/actions/workflows/release.yml)
-[![RubyGem Version](https://img.shields.io/gem/v/beaker.svg)](https://rubygems.org/gems/beaker)
-[![RubyGem Downloads](https://img.shields.io/gem/dt/beaker.svg)](https://rubygems.org/gems/beaker)
+[![License](https://img.shields.io/github/license/voxpupuli/beaker-hiera.svg)](https://github.com/voxpupuli/beaker-hiera/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/voxpupuli/beaker-hiera/branch/master/graph/badge.svg?token=Mypkl78hvK)](https://codecov.io/gh/voxpupuli/beaker-hiera)
+[![Release](https://github.com/voxpupuli/beaker-hiera/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/beaker-hiera/actions/workflows/release.yml)
+[![RubyGem Version](https://img.shields.io/gem/v/beaker-hiera.svg)](https://rubygems.org/gems/beaker-hiera)
+[![RubyGem Downloads](https://img.shields.io/gem/dt/beaker-hiera.svg)](https://rubygems.org/gems/beaker-hiera)
 [![Donated by Puppet Inc](https://img.shields.io/badge/donated%20by-Puppet%20Inc-fb7047.svg)](#transfer-notice)
 
 Beaker Hiera DSL Extension Library! This allows to easily use Hiera data in acceptance tests.
