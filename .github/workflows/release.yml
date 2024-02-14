@@ -20,7 +20,7 @@ jobs:
       - name: Build gem
         run: gem build *.gemspec
       - name: Publish gem to rubygems.org
-        run: gem push *.gem
+        run: gem build --strict --verbose *.gemspec
         env:
           GEM_HOST_API_KEY: '${{ secrets.RUBYGEMS_AUTH_TOKEN }}'
       - name: Setup GitHub packages access
