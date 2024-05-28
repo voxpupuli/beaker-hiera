@@ -18,9 +18,9 @@ jobs:
         env:
           BUNDLE_WITHOUT: release:development:rubocop
       - name: Build gem
-        run: gem build *.gemspec
-      - name: Publish gem to rubygems.org
         run: gem build --strict --verbose *.gemspec
+      - name: Publish gem to rubygems.org
+        run: gem push *.gem
         env:
           GEM_HOST_API_KEY: '${{ secrets.RUBYGEMS_AUTH_TOKEN }}'
       - name: Setup GitHub packages access
