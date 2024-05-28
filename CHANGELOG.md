@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.1](https://github.com/voxpupuli/beaker-hiera/tree/1.1.1) (2024-05-28)
+
+[Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/1.1.0...1.1.1)
+
+There were some problems with the CI pipeline, so the 1.1.0 release was only published to GitHub packages, not to rubygems.org. This is fixed with the 1.1.1 release.
+
+**Fixed bugs:**
+
+- Fix typo in CI config [\#36](https://github.com/voxpupuli/beaker-hiera/pull/36) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.1.0](https://github.com/voxpupuli/beaker-hiera/tree/1.1.0) (2024-05-28)
 
 [Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/1.0.0...1.1.0)
