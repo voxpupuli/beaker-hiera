@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.0](https://github.com/voxpupuli/beaker-hiera/tree/1.1.0) (2024-05-28)
+
+[Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/1.0.0...1.1.0)
+
+**Implemented enhancements:**
+
+- beaker: Allow 6.x [\#34](https://github.com/voxpupuli/beaker-hiera/pull/34) ([bastelfreak](https://github.com/bastelfreak))
+- Add Ruby 3.3 to CI matrix [\#33](https://github.com/voxpupuli/beaker-hiera/pull/33) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- voxpupuli-rubocop: Require 2.7.0 [\#32](https://github.com/voxpupuli/beaker-hiera/pull/32) ([bastelfreak](https://github.com/bastelfreak))
+- CI: Build gems with strict and verbose mode [\#31](https://github.com/voxpupuli/beaker-hiera/pull/31) ([bastelfreak](https://github.com/bastelfreak))
+- README.md: Add badges, transfer notice and release information [\#30](https://github.com/voxpupuli/beaker-hiera/pull/30) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.0.0](https://github.com/voxpupuli/beaker-hiera/tree/1.0.0) (2023-11-03)
 
 [Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/0.6.0...1.0.0)
