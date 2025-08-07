@@ -4,7 +4,7 @@ module Beaker
       module Hiera
         module Version
           # Current version of beaker-hiera
-          STRING = '1.1.1'.freeze
+          STRING = '2.0.0'.freeze
         end
       end
     end

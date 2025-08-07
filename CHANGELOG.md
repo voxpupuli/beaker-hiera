@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/voxpupuli/beaker-hiera/tree/2.0.0) (2025-08-07)
+
+[Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/1.1.1...2.0.0)
+
+**Breaking changes:**
+
+- Require Ruby 3.2 or newer [\#44](https://github.com/voxpupuli/beaker-hiera/pull/44) ([bastelfreak](https://github.com/bastelfreak))
+
+**Implemented enhancements:**
+
+- CI: Generate matrix dynamically / drop simplecov [\#43](https://github.com/voxpupuli/beaker-hiera/pull/43) ([bastelfreak](https://github.com/bastelfreak))
+- beaker: Allow 7.x [\#42](https://github.com/voxpupuli/beaker-hiera/pull/42) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.1.1](https://github.com/voxpupuli/beaker-hiera/tree/1.1.1) (2024-05-28)
 
 [Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/1.1.0...1.1.1)
