@@ -1,4 +1,3 @@
-require 'simplecov'
 require 'beaker-hiera'
 
 RSpec.configure do |config|
