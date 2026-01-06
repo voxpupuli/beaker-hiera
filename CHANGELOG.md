@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/voxpupuli/beaker-hiera/tree/2.1.0) (2026-01-06)
+
+[Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/2.0.0...2.1.0)
+
+**Implemented enhancements:**
+
+- Add Ruby 4.0 support [\#54](https://github.com/voxpupuli/beaker-hiera/pull/54) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [2.0.0](https://github.com/voxpupuli/beaker-hiera/tree/2.0.0) (2025-08-07)
 
 [Full Changelog](https://github.com/voxpupuli/beaker-hiera/compare/1.1.1...2.0.0)
